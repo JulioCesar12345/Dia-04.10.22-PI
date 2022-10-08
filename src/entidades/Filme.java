@@ -13,6 +13,7 @@ public class Filme extends Item {
 
     private String diretor;
     private int duracao;
+    
 
     public Filme(Categoria categoria) {
         super(categoria);
@@ -45,7 +46,7 @@ public class Filme extends Item {
     public void setDuracao(int duracao) {
         this.duracao = duracao;
     }
-
+   @Override
     public String toString() {
         return "Filme \n"
                 + " ID: " + getId() + "\n"

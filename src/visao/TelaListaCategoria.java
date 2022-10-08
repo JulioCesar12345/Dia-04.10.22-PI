@@ -29,7 +29,7 @@ public class TelaListaCategoria extends javax.swing.JFrame {
         DefaultTableModel conteudo = (DefaultTableModel)tabCategorias.getModel();
         conteudo.setRowCount(0);
         for(Categoria cat: categorias){
-            Object [] linha = {
+            Object[] linha = {
                 cat.getNome(),
                 cat.getNomeTipo()
             };
@@ -52,7 +52,7 @@ public class TelaListaCategoria extends javax.swing.JFrame {
         scrrol = new javax.swing.JScrollPane();
         tabCategorias = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         btnNovo.setText("Nova");
         btnNovo.addActionListener(new java.awt.event.ActionListener() {
@@ -152,15 +152,17 @@ public class TelaListaCategoria extends javax.swing.JFrame {
          JOptionPane.showMessageDialog(this, "Selecione uma categoria!");     
        }else{
            Categoria categoria = categorias.get(linha);
-           TelaCadastroCategoria cadCategoria = new TelaCadastroCategoria(this);
+           TelaCadastroCategoria cadCategoria = new TelaCadastroCategoria();
            //Envia a categoria selecionada para a tela de alteração
       cadCategoria.setCategoria(categoria);
       cadCategoria.setVisible(true);
+      montarListaCategorias();
        }   
     }//GEN-LAST:event_btnAlterarActionPerformed
 
     private void btnNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoActionPerformed
-        new TelaCadastroCategoria(this).setVisible(true);
+        new TelaCadastroCategoria().setVisible(true);
+        
     }//GEN-LAST:event_btnNovoActionPerformed
 
     /**

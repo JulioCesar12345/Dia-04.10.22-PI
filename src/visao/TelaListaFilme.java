@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import persistencia.FilmeDAO;
 
+
 /**
  *
  * @author julio.gabardo
@@ -38,6 +39,7 @@ public class TelaListaFilme extends javax.swing.JFrame {
             modelo.addRow(linha);
         }
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -54,7 +56,7 @@ public class TelaListaFilme extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tabFilmes = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         btnNovo.setText("Novo");
         btnNovo.addActionListener(new java.awt.event.ActionListener() {
@@ -91,6 +93,11 @@ public class TelaListaFilme extends javax.swing.JFrame {
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        tabFilmes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tabFilmesMouseEntered(evt);
             }
         });
         jScrollPane1.setViewportView(tabFilmes);
@@ -134,7 +141,7 @@ public class TelaListaFilme extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoActionPerformed
-        new TelaCadastroFilme(this).setVisible();
+        new TelaCadastroFilme(this).setVisible(true);
     }//GEN-LAST:event_btnNovoActionPerformed
 
     private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
@@ -157,17 +164,23 @@ public class TelaListaFilme extends javax.swing.JFrame {
             Filme filme = listaFilmes.get(linha);
             String mensagem = "Deseja realmente excluir o filme "+filme.getTitulo()+"?";
             int opcao = JOptionPane.showConfirmDialog(this, mensagem, "Confirme a exclusão",JOptionPane.YES_NO_OPTION);
-        }
+        
+          
           
         if(opcao == JOptionPane.YES_OPTION){
-            if (FilmeDAO.excluir(filme.getId)) {
+            if (FilmeDAO.excluir(filme.getId())) {
                 montarListaFilmes();
                 JOptionPane.showMessageDialog(this, "Filme excluido com sucesso!");
             } else {
                 JOptionPane.showMessageDialog(this, "Erro ao excluir o Filme!");
             }
         }
+    }
     }//GEN-LAST:event_btnExcluirActionPerformed
+
+    private void tabFilmesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabFilmesMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tabFilmesMouseEntered
 
     /**
      * @param args the command line arguments

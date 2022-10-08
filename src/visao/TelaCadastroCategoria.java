@@ -26,10 +26,6 @@ public class TelaCadastroCategoria extends javax.swing.JFrame {
         this.telaListagem = telaListagem;
     }
 
-    TelaCadastroCategoria(TelaListaCategoria aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
         txtCategoria.setText(categoria.getNome());
@@ -80,7 +76,7 @@ public class TelaCadastroCategoria extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jLabel1.setText("Categoria:");
@@ -161,7 +157,7 @@ public class TelaCadastroCategoria extends javax.swing.JFrame {
 
         }
 
-
+   
     }//GEN-LAST:event_btnGravarActionPerformed
 
     /**

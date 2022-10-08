@@ -3,12 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/julio/Documents/NetBeansProjects/ProjetoIntegrador2-main/ProjetoIntegrador2-main/src/persistencia/FilmeDAO.java</file>
-            <file>file:/C:/Users/julio/Documents/NetBeansProjects/ProjetoIntegrador2-main/ProjetoIntegrador2-main/src/visao/Principal.java</file>
-            <file>file:/C:/Users/julio/Documents/NetBeansProjects/ProjetoIntegrador2-main/ProjetoIntegrador2-main/src/visao/TelaCadastroFilme.java</file>
-            <file>file:/C:/Users/julio/Documents/NetBeansProjects/ProjetoIntegrador2-main/ProjetoIntegrador2-main/src/persistencia/JogoDAO.java</file>
-            <file>file:/C:/Users/julio/Documents/NetBeansProjects/ProjetoIntegrador2-main/ProjetoIntegrador2-main/src/visao/TelaCadastroJogo.java</file>
-            <file>file:/C:/Users/julio/Documents/NetBeansProjects/ProjetoIntegrador2-main/ProjetoIntegrador2-main/src/visao/TelaListaJogo.java</file>
+            <file>file:/C:/Users/julio.gabardo/Documents/NetBeansProjects/ProjetoFinal-main/ProjetoFinal-main/src/visao/TelaListaJogo.java</file>
+            <file>file:/C:/Users/julio.gabardo/Documents/NetBeansProjects/ProjetoFinal-main/ProjetoFinal-main/src/visao/TelaListaFilme.java</file>
+            <file>file:/C:/Users/julio.gabardo/Documents/NetBeansProjects/ProjetoFinal-main/ProjetoFinal-main/src/entidades/Filme.java</file>
+            <file>file:/C:/Users/julio.gabardo/Documents/NetBeansProjects/ProjetoFinal-main/ProjetoFinal-main/src/visao/TelaCadastroJogo.java</file>
+            <file>file:/C:/Users/julio.gabardo/Documents/NetBeansProjects/ProjetoFinal-main/ProjetoFinal-main/src/visao/TelaCadastroCategoria.java</file>
+            <file>file:/C:/Users/julio.gabardo/Documents/NetBeansProjects/ProjetoFinal-main/ProjetoFinal-main/src/testes/TesteCategoria.java</file>
+            <file>file:/C:/Users/julio.gabardo/Documents/NetBeansProjects/ProjetoFinal-main/ProjetoFinal-main/src/visao/TelaCadastroFilme.java</file>
+            <file>file:/C:/Users/julio.gabardo/Documents/NetBeansProjects/ProjetoFinal-main/ProjetoFinal-main/src/visao/TelaListaCategoria.java</file>
+            <file>file:/C:/Users/julio.gabardo/Documents/NetBeansProjects/ProjetoFinal-main/ProjetoFinal-main/src/persistencia/FilmeDAO.java</file>
         </group>
     </open-files>
 </project-private>

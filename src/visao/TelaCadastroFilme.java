@@ -9,30 +9,29 @@ import entidades.Filme;
 import javax.swing.JOptionPane;
 import persistencia.CategoriaDAO;
 import persistencia.FilmeDAO;
-       
+
 /**
  *
- * @author julio
+ * @author Maikon
  */
 public class TelaCadastroFilme extends javax.swing.JFrame {
-    
+
     private Filme filme;
     private TelaListaFilme telaLista;
 
     /**
-     * Creates new form TelaCadastroFilme
+     * Creates new form TelaCadastroJogo
      */
-    public TelaCadastroFilme() {
+    public TelaCadastroFilme(TelaListaFilme telaLista) {
         initComponents();
         this.filme = new Filme(new Categoria());
         this.telaLista = telaLista;
-        
-        for (Categoria c :CategoriaDAO.listarPorTipo('F')){
-            
+        for (Categoria c : CategoriaDAO.listarPorTipo('F')) {
+            cmbCategoria.addItem(c);
         }
-                
     }
-    public void setFilme(Filme filme){
+    
+    public void setFilme(Filme filme) {
         this.filme = filme;
         txtTitulo.setText(filme.getTitulo());
         txtDescricao.setText(filme.getDescricao());
@@ -42,6 +41,7 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
         txtDuracao.setText(String.valueOf(filme.getDuracao()));
         txtNumeroDias.setText(String.valueOf(filme.getNumeroDias()));
     }
+
     private void inserir(){
         if(FilmeDAO.inserir(filme)){
             JOptionPane.showMessageDialog(this, "Filme inserido com sucesso!");
@@ -108,7 +108,7 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
 
         jLabel5.setText("Diretor:");
 
-        cmbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new Categoria[] {   }));
 
         jLabel6.setText("Duração:");
 
@@ -276,18 +276,22 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaCadastroFilme.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
-                new TelaCadastroFilme().setVisible(true);
+                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGravar;
-    private javax.swing.JComboBox<String> cmbCategoria;
+    private javax.swing.JComboBox<Categoria> cmbCategoria;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -304,4 +308,7 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
     private javax.swing.JTextField txtPreco;
     private javax.swing.JTextField txtTitulo;
     // End of variables declaration//GEN-END:variables
+
+    
+ 
 }

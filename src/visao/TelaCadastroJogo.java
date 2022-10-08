@@ -28,11 +28,7 @@ public class TelaCadastroJogo extends javax.swing.JFrame {
             cmbCategoria.addItem(c);
         }
     }
-
-    private TelaCadastroJogo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+  
     public void setJogo(Jogo jogo) {
         this.jogo = jogo;
         txtTitulo.setText(jogo.getTitulo());
@@ -94,7 +90,7 @@ public class TelaCadastroJogo extends javax.swing.JFrame {
 
         jLabel9.setText("jLabel9");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 2, 24)); // NOI18N
@@ -125,7 +121,7 @@ public class TelaCadastroJogo extends javax.swing.JFrame {
             }
         });
 
-        cmbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new Categoria[] { , }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -147,8 +143,8 @@ public class TelaCadastroJogo extends javax.swing.JFrame {
                                         .addComponent(jLabel6)
                                         .addGap(72, 72, 72)
                                         .addComponent(jLabel7))
-                                    .addComponent(cmbCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(33, 33, 33)
+                                    .addComponent(cmbCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(31, 31, 31)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel8)
                                     .addComponent(txtTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -255,7 +251,7 @@ public class TelaCadastroJogo extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCadastroJogo().setVisible(true);
+               new TelaListaJogo().setVisible(true); 
             }
         });
     }

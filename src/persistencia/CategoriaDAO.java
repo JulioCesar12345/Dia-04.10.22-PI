@@ -36,21 +36,19 @@ public class CategoriaDAO {
     public static boolean alterar(Categoria categoria) {
         try {
             Connection con = Conexao.getConexao();
-            String sql = "UPDATE categoria set"
-                    + "nome = ?, "
-                    + "tipo = ? "
-                    + "WHERE id = ?";
+            String sql = "UPDATE categoria set nome = ?, tipo = ? WHERE id = ?";
             PreparedStatement comando = con.prepareStatement(sql);
-            comando.setString(1, categoria.getNome());
+            comando.setString(1, categoria.getNome());             
             comando.setString(2, String.valueOf(categoria.getTipo()));
             comando.setInt(3, categoria.getId());
-
+            
             int nrLinhas = comando.executeUpdate();
 
             comando.close();
 
             return nrLinhas > 0;
         } catch (Exception e) {
+            System.out.println(e);
             return false;
         }
     }
@@ -92,10 +90,8 @@ public class CategoriaDAO {
         return categorias;
     }
 
-    public static Iterable<Categoria> listarPorTipo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    public ArrayList<Categoria> listarPorTipo(char tipo){
+  
+    public static ArrayList<Categoria> listarPorTipo(char tipo){
         ArrayList<Categoria> categorias = new ArrayList<Categoria>();
         try{
             Connection conexao = Conexao.getConexao();

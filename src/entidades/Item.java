@@ -18,6 +18,7 @@ public class Item {
     private Categoria categoria;
 
     /**
+     * @param categoria
      * @return the id
      * 
      */

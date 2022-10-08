@@ -5,6 +5,10 @@
  */
 package entidades;
 
+import java.util.Objects;
+
+
+
 /**
  *
  * @author julio.gabardo
@@ -82,6 +86,15 @@ public class Categoria {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 79 * hash + this.id;
+        hash = 79 * hash + Objects.hashCode(this.nome);
+        hash = 79 * hash + this.tipo;
+        return hash;
     }
 
     public String toString() {
